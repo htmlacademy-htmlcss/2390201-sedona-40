@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Rom Nosk](https://up.htmlacademy.ru/htmlcss/40/user/2390201).
-* Наставник: `Неизвестно`.
+* Наставник: [Ирина Антипина](https://htmlacademy.ru/profile/id2108789).
 
 ---
 
