@@ -64,24 +64,39 @@ body {
 }
 
 .navigation-menu {
+  display: flex;
+  flex-wrap: wrap;
+  width: 339px;
   margin: 0 auto 0 30px;
   padding: 0;
   list-style: none;
 }
 
 .navigation-user {
+  display: flex;
+  flex-wrap: wrap;
+  width: 268px;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .navigation-link {
+  display: block;
+  padding: 20px 16px 20px 16px;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
   color: #000000;
   text-align: center;
   text-decoration: none;
+}
+
+.navigation-user .navigation-link {
+  min-width: 4px;
+  min-height: 32px;
+  background-color: #82b3d3;
+  /*для визуализации блоков меню, в которые скрыт текст*/
 }
 
 .main-container {
@@ -286,6 +301,22 @@ body {
   justify-content: space-between;
 }
 
+.contacts-social-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 142px;
+  margin: auto 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.contacts-social-link {
+  display: block;
+  min-width: 47px;
+  min-height: 40px;
+  background-color: #82b3d3;
+}
+
 .contacts-phone a {
   font-size: 40px;
   line-height: 40px;
@@ -298,20 +329,42 @@ body {
 
 .catalog-header-and-filter {
   width: 1200px;
+  display: flex;
+  flex-direction: column;
   background: url("../images/catalog-filter-background.jpg") no-repeat center center;
   background-size: cover;
   background-color: #f2f2f2;
-  /*для демонстрации,что блок полностью заполнен фоном*/
   color: #ffffff;
 }
 
+.catalog-header {
+  width: 1060px;
+  display: flex;
+  flex-direction: column;
+  margin: 35px auto 40px auto;
+  padding: 0;
+}
+
 .catalog-header-title {
+  margin: 0 0 8px 0;
   font-weight: 700;
   font-size: 60px;
   line-height: 78px;
 }
 
+.catalog-header-breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto 0 0;
+  padding: 0;
+  list-style-type: none;
+}
+
 .catalog-header-breadcrumbs-link {
+  display: block;
+  min-width: 13px;
+  min-height: 15px;
+  background-color: #82b3d3;
   font-size: 16px;
   line-height: 21px;
   color: #ffffff;
@@ -328,6 +381,10 @@ body {
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
+}
+
+.catalog-filter-list {
+  list-style-type: none;
 }
 
 .catalog-filter-control {
@@ -364,6 +421,25 @@ body {
   font-family: inherit;
   font-size: 18px;
   line-height: 21px;
+  width: 292px;
+  height: 49px;
+  margin: auto 0;
+}
+
+.hotels-display-type {
+  display: flex;
+  flex-wrap: wrap;
+  width: 160px;
+  margin: auto 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.hotels-display-type-item {
+  display: block;
+  width: 48px;
+  height: 48px;
+  background-color: #82b3d3;
 }
 
 .hotel-list {
@@ -413,6 +489,7 @@ body {
 .catalog-pagination-link {
   display: block;
   width: 60px;
+  height: 60px;
   margin-right: 8px;
   font-weight: 700;
   font-size: 20px;
