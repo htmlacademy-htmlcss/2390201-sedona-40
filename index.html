@@ -4,6 +4,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link rel="icon" href="favicon.ico" sizes="32x32">
     <link rel="stylesheet" href="styles/styles.css">
   </head>
 
@@ -148,8 +149,9 @@
           </p>
         </section>
       </footer>
-
-      <div class="modal-container">
+      
+      <!--  Модальное окно реализовано в div ниже. Чтобы его вызвать, нужно удалить класс modal-container-close -->
+      <div class="modal-container modal-container-close">
         <div class="modal modal-search">
           <button class="modal-close-button">
             <span class="visually-hidden">Закрыть</span>
@@ -157,39 +159,46 @@
           <section class="modal-content">
             <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
             <form class="modal-search-form" action="https://echo.htmlacademy.ru/" method="post">
-              <div class="modal-field-group">
+              <div class="modal-date-input-group">
                 <label class="modal-search-form-label" for="arrival-date">Дата Заезда:</label>
-                <input class="modal-search-form-input-date" type="date" id="arrival-date" name="arrival-date" value="2020-04-27">
+                <input class="modal-search-form-input-date" type="text" id="arrival-date" name="arrival-date" value="27 апреля 2020">
                 <p class="modal-search-form-prompt mistake-prompt">Мы не можем отправить вас в прошлое.</p>
               </div>
-              <div class="modal-field-group">
+              <div class="modal-date-input-group">
                 <label class="modal-search-form-label" for="departure-date">Дата Выезда:</label>
-                <input class="modal-search-form-input-date" type="date" id="departure-date" name="departure-date" value="2023-01-09">
+                <input class="modal-search-form-input-date" type="text" id="departure-date" name="departure-date" value="1 сентября 2023">
                 <p class="modal-search-form-prompt">На эти даты есть свободные номера. Пока есть.</p>
               </div>
-              <div class="modal-field-group">
-                <label class="modal-search-form-label adults-label" for="adults-quantity"> 
-                  Взрослые:</label>
-                <input class="modal-search-form-input-quantity adults-input" type="number" value="2" name="adults-quantity" id="adults-quantity">
-                <button class="modal-range-toggle adults-decr" type="button">
-                  <span class="visually-hidden">Уменьшить кол-во взрослых</span>
-                </button>
-                <button class="modal-range-toggle adults-incr" type="button">
-                  <span class="visually-hidden">Увеличить кол-во взрослых</span>
-                </button>
-                
-                <label class="modal-search-form-label children-label" for="childrens-quantity"> 
-                  Дети:</label>
-                <input class="modal-search-form-input-quantity children-input" type="number" value="2" name="childrens-quantity" id="childrens-quantity">
-                <button class="modal-range-toggle children-decr" type="button">
-                  <span class="visually-hidden">Уменьшить кол-во детей</span>
-                </button>
-                <button class="modal-range-toggle children-incr" type="button">
-                  <span class="visually-hidden">Увеличить кол-во детей</span>
-                </button>
-                
+
+              <div class="modal-adult-children-group">
+                <div class="modal-people-input-wrapper">
+                  <label class="modal-search-form-label adults-label" for="adults-quantity"> 
+                    Взрослые:</label>
+
+                  <div class="modal-number-input-group">
+                    <button class="modal-range-toggle modal-toggle-decr" type="button"></button>
+                    <input class="modal-search-number-input adults-input" type="number" value="2" name="adults-quantity" id="adults-quantity">
+                    <button class="modal-range-toggle modal-toggle-incr" type="button"></button>
+                  </div>
+                </div>
+
+                <div class="modal-people-input-wrapper">
+                  <span class="modal-children-label-wrapper">
+                    <label class="modal-search-form-label" for="childrens-quantity"> 
+                      Дети:</label>
+                    <span class="tooltip">
+                      <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-children"></button>
+                      <span class="tooltip-text" role="tooltip" id="tooltip-label-children">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+                    </span>
+                  </span>
+                  <div class="modal-number-input-group">
+                    <button class="modal-range-toggle modal-toggle-decr" type="button"></button>
+                    <input class="modal-search-number-input children-input" type="number" value="2" name="childrens-quantity" id="childrens-quantity">
+                    <button class="modal-range-toggle modal-toggle-incr" type="button"></button>
+                  </div>
+                </div>
               </div>
-              <button class="button modal-search-submit-button" type="submit">Найти</button>
+              <button disabled class="button modal-search-submit-button" type="submit">Найти</button>
             </form>
           </section>
         </div>
@@ -197,5 +206,4 @@
 
     </div>
   </body>
-
 </html>
