@@ -158,11 +158,11 @@ body {
   background-position: center;
 }
 
-.navigation-user .navigation-item:nth-child(1) .navigation-link {
+.navigation-link-search {
   background-image: url(../images/icons/icon-search.svg);
 }
 
-.navigation-user .navigation-item:nth-child(2) .navigation-link {
+.navigation-link-selected {
   background-image: url(../images/icons/icon-heart.svg);
 }
 
@@ -939,13 +939,13 @@ body {
   color: #ffffff4d;
 }
 
-.catalog-header-breadcrumbs .catalog-header-breadcrumbs-item:nth-child(1) .catalog-header-breadcrumbs-link {
+.breadcrumbs-home {
   background-image: url(../images/icons/icon-house-small.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.catalog-header-breadcrumbs .catalog-header-breadcrumbs-item:nth-child(1) .catalog-header-breadcrumbs-link:hover {
+.breadcrumbs-home:hover {
   opacity: 0.6;
 }
 
