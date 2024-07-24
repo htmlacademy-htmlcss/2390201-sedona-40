@@ -109,6 +109,7 @@ body {
 .navigation-menu {
   display: flex;
   flex-wrap: wrap;
+  max-width: 500px;
   margin: 0 auto 0 30px;
   padding: 0;
   list-style: none;
@@ -139,6 +140,10 @@ body {
 
 .navigation-link:hover {
   opacity: 0.6;
+}
+
+.navigation-link:active {
+  opacity: 0.3;
 }
 
 .navigation-link-current::before {
@@ -181,10 +186,11 @@ body {
 
 .navigation-user-button {
   display: block;
+  box-sizing: border-box;
   padding: 8px;
   margin-left: 20px;
-  min-width: 144px;
-  min-height: 20px;
+  width: 160px;
+  min-height: 36px;
 }
 
 .page-main {
@@ -333,6 +339,7 @@ body {
 
 .comfort-list {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   text-align: center;
@@ -411,9 +418,10 @@ body {
   background-color: #756157;
   text-transform: uppercase;
   display: block;
+  box-sizing: border-box;
   padding: 8px;
-  min-width: 360px;
-  min-height: 36px;
+  width: 376px;
+  min-height: 52px;
   margin: 0 auto;
 }
 
